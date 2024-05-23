@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.20)
 project(DateProject)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -16,6 +16,9 @@ target_link_libraries(
     ${PROJECT_NAME}
     date
 )
+
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 
 if (NOT googletest) # is googletest defined if already built?
 	include(FetchContent)

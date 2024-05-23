@@ -21,3 +21,5 @@ add_custom_command(
      POST_BUILD 
      COMMAND ${PROJECT_NAME}
 )
+
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
